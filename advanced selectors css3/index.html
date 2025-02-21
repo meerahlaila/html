@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selectors</title>
+</head>
+<style>
+ body{
+    background-color: #545454;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white;
+ }
+
+ li{
+ list-style: none;
+ }
+
+ ul > li { color: aqua; font-weight: lighter;
+
+ }
+
+ h1, p{
+    background-color: #939993;
+ }
+
+ input{
+    padding: 10px;
+    font-size: 16px;
+ }
+
+ input[type=text]{
+    color: blue;
+    border: 2px solid;
+ }
+
+ input[type=password]{
+    color: darkred; border: 4px solid;
+ }
+
+ button{
+    padding:10px 20px;
+    background-color: blue;
+    border: none;
+    font-size: 20px;
+    color: antiquewhite;
+    border-radius: 10px;
+    cursor: progress;
+
+ }
+
+ li::before{
+    content: "👨‍🚀";
+ }
+
+ li::after{
+    content: "🚀";
+ }
+
+ a::before{
+ content:"💫" ;
+ }
+
+ p::first-letter{
+color: rgb(178, 182, 60);
+font-size: 70px;
+ }
+
+ li:nth-child(1){
+    color: red;
+ }
+
+ p:not(:first-of-type){
+    color: yellow;
+    text-decoration: underline;
+ }
+
+ a{
+    text-decoration: none;
+    color: aquamarine;
+ }
+</style>
+<body>
+    <h1>Space Explorer's Hub:</h1>
+    <ul>
+        <li>Moon missions</li>
+        <li>Star striker</li>
+        <li>Galaxy gallery</li>
+        <li>Space station</li>
+        <ol></ol>
+        <ol></ol>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error doloribus odio perferendis, non magnam reiciendis molestiae repellendus, maxime aliquid, culpa voluptatum impedit eum ipsum obcaecati id saepe deserunt? Aliquam.</p>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <input type="text" placeholder="Enter your name">
+    <input type="password" placeholder="Enter your password">
+    <br> <br>
+
+        <a href="">Let's explore the world!</a>
+        <a href="">Come join us on our journey!</a>
+        <a href="">It's gonna be a blast.</a>
+    <button>Submit
+
+    </button>
+
+    
+
+</body>
+</html>
