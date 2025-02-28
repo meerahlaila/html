@@ -8,7 +8,7 @@
 <style>
 
     body{
-        height: 1000px;
+        height: 2000px;
     }
     div{
         padding: 10px;
@@ -19,6 +19,7 @@
     .relative{
 position: relative; 
 height: 500px; 
+background-color: black;
 
     }
 
@@ -43,16 +44,18 @@ height: 500px;
         background-color: lightcoral;
         position: sticky; 
         top:0;
-        margin-bottom: 1000px;
+        margin-bottom: 500px;
+        z-index: 20;
     }
 </style>
 
 <body>
     <div class="sticky">
-sticky
+sticky 1
     </div>
     <div class="sticky">
-        sticky
+        sticky 2
+
     </div>
 
     <section class="relative">
