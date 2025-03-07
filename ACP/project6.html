@@ -6,15 +6,88 @@
     <title>Document</title>
 </head>
 <style>
+body{
+    height: 1300px;
+}
 
+div{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid;
+}
+
+.relative{
+    position:relative;
+    height: 500px;
+    background-color: azure;
+}
+
+.static{
+    position: static;
+    background-color: lightblue;
+}
+
+.absolute{
+    position: absolute;
+    background-color: lightpink;
+    bottom: 0;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+.fixed{
+    background-color: lightcyan;
+    position: fixed;
+    bottom: 0;
+    cursor: progress;
+    
+}
+
+.sticky{
+    background-color: lightgoldenrodyellow;
+    top: 0;
+    z-index: 20;
+    position: sticky;
+}
+
+.sticky1{
+    background-color: lightblue;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
 </style>
 <body>
-    <div class="sticky">Home</div>
+    
+    <div class="sticky">Home
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, error aliquid, eos accusamus esse vitae facere dolorum provident in voluptatum repellat commodi culpa perspiciatis ea, possimus atque? Consequuntur, ea sit!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit necessitatibus dolores dolorum sapiente cupiditate quos molestias, eos, accusamus iusto quis dolor voluptatem aspernatur repudiandae iste animi accusantium ducimus praesentium maiores.
+    </p>
     <div class="sticky">Sign up</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, error aliquid, eos accusamus esse vitae facere
+        dolorum provident in voluptatum repellat commodi culpa perspiciatis ea, possimus atque? Consequuntur, ea sit!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit necessitatibus dolores dolorum sapiente cupiditate
+        quos molestias, eos, accusamus iusto quis dolor voluptatem aspernatur repudiandae iste animi accusantium ducimus
+        praesentium maiores.
+    </p>
     <section class="relative">
         <div class="static">Log in</div>
+        <p>Log in to our program using your old account. <br><br>
+            <input type="email" placeholder="Enter your email address">
+            <br> <br>
+            <input type="password" placeholder="Enter your password">
+        </p>
+        <div class="sticky1">Logging in...
+        </div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nobis maxime et dolor fuga. Praesentium, natus qui. Eum dolorem est provident iste fuga, quasi alias quo, soluta neque perferendis Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui iusto iure dolorum velit sunt neque quos maiores, consequatur commodi molestiae incidunt voluptatem impedit placeat amet eligendi soluta eos exercitationem?perferendis Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui iusto iure dolorum velit sunt neque
+        quos maiores, consequatur commodi molestiae. <br>
+        Lorem ipsum dolor sit amet consect, <br>
+        Lorem ipsum dolor sit amet consecueit.
+
+        </body>
         <div class="absolute">Start</div>
         <div class="fixed">Chat with us!</div>
     </section>
-</body>
+   
 </html>
