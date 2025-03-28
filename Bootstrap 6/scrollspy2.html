@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Scrollspy with Enhanced Design</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            padding-top: 80px; /* Adjust for fixed navbar */
+            background-color: #f8f9fa; 
+        }
+
+        /* Gradient Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+        }
+
+        .navbar-brand, .nav-link {
+            color: white ; 
+        }
+
+        .nav-link:hover {
+            color: #ffdd57 ; 
+        }
+
+        /* Card-style Sections */
+        .scrollspy-section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .scrollspy-section:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section Headings */
+        h4 {
+            color: #343a40; 
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Paragraphs */
+        p {
+            color: #495057; 
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav id="navbar-example2" class="navbar navbar-expand-md navbar-dark fixed-top px-4">
+        <a class="navbar-brand" href="#">Scrollspy Demo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#section1">Section 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">Section 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section3">Section 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="80" class="scrollspy-example container mt-5" tabindex="0">
+        <div id="section1" class="scrollspy-section">
+            <h4>Section 1</h4>
+            <p>Welcome to Section 1! This section features a card-style design with a hover effect. Scroll down to see how the navigation highlights change as you move through the page.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+        <div id="section2" class="scrollspy-section">
+            <h4>Section 2</h4>
+            <p>This is Section 2. The smooth scrolling and gradient navbar make this page feel modern and dynamic. Keep scrolling to explore more!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+        <div id="section3" class="scrollspy-section">
+            <h4>Sec
+                tion 3</h4>
+            <p>You've reached Section 3! Notice how the navigation item is highlighted as you scroll. The design is clean, responsive, and visually appealing.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+    </div>
+
+    <footer class="p-5 mt-5 bg-dark ">
+        <p class="text-white text-center">&copy; All rights reserved - 2025</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
