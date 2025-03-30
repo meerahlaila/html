@@ -8,17 +8,23 @@
 </head>
 
 <body>
-    <input type="text" id="v1">
-    <input type="text" id="v2">
+    <h1>Calculate your <abbr title="Body Mass Index">BMI</abbr></h1>
+    <label for="v1">Weight</label>
+    <input type="text" id="v1" placeholder="kg"> <br> <br>
+    <label for="v2">Height</label>
+    <input type="text" id="v2" placeholder="m">
+    <br><br>
     <button onclick="add()">Click</button>
+    <p>Your BMI is:</p>
     <p id="result"></p>
     <script>
         function add() {
             const v1 = document.getElementById("v1").value;
             const v2 = document.getElementById("v2").value;
 
-            sum = parseInt(v1) / parseInt(v2**2);
+            sum = parseInt(v1) / parseInt(v2**2)
             document.getElementById("result").innerHTML = sum
+           
         }
 
 
