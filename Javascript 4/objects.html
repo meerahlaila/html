@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JS</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let person = {
+            firstname: "Nameerah",
+            lastname: "Laila",
+            age: 15,
+            isEmployed: true,
+            address: {
+                street: "ABC street",
+                city: "Dhaka",
+                zipcode: 19999,
+                country: "Bangladesh"
+            },
+            hobbies: ["reading", "travelling", "walking"],
+
+            getFullName: function () {
+                return `${this.firstname} ${this.lastname}`
+            },
+            greet: function () {
+                return `Hi my name is ${this.getFullName()} and I'm ${this.age} years old`
+            }
+        };
+
+        document.write(person.greet() + "<br>")
+        document.write(person.getFullName() + "<br>")
+
+        person.email = "xyz@gmail.com"
+
+        document.write(person.email + "<br>") 
+
+        person.showHobbies = function() {
+            document.write(`My hobbies are ${this.hobbies.join(", ")}`)
+        }
+
+        person.showHobbies()
+    </script>
+</body>
+
+</html>

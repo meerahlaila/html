@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        function findMax() {
+            let max = 0;
+            for (let i = 0; i < arguments.length; i++) {
+if(arguments[i] > max){
+    max = arguments[i]
+}
+            }
+            return max;
+
+        }
+
+        document.write(findMax(5, 1, 15, 7, 9, 28, 40))
+    </script>
+</body>
+
+</html>
