@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        fruits = [" Mango", " Banana", " Watermelon", " Blueberries"];
+        document.write(fruits + "<br>")
+        document.write(fruits[2] + "<br>")
+
+
+        document.write(fruits.join(" ") + "<br>")
+        document.write(fruits.length + "<br>"); fruits.push(" Grape")
+        document.write(fruits + "<br>");
+        fruits.pop();
+    document.write(fruits + "<br>");
+
+    fruits.unshift("Coconut");
+    document.write(fruits + "<br>");
+
+    fruits.shift("Coconut");
+    document.write(fruits + "<br>");
+
+    fruits[0] = "Guava"
+    document.write(fruits + "<br>");
+
+   fruits.forEach(fruit => document.write(` ${fruit} `))
+
+   const hasApple = fruits.includes("Apple")
+   document.write(hasApple);
+
+   const hasfruit = fruits.find(fruit => fruit.startsWith(""))
+   document.write(hasfruit + "<br>");
+
+   const hasIndex = fruits.findIndex(fruit => fruit.startsWith("Banana"))
+    document.write(hasIndex + "<br>");
+
+    </script>
+</body>
+
+</html>
