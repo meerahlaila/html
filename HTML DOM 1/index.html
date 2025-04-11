@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li class="list-item">First</li>
+        <li class="list-item">Second</li>
+
+    </ul>
+
+    <h1>Hello</h1>
+    <h1>World</h1>
+
+    <script>
+        const list = document.getElementById('list');
+
+        const lists = document.getElementsByClassName('list-item');
+       
+        const heading = document.getElementsByTagName('h1');
+
+        const a = document.querySelector('#list');
+
+        const b = document.querySelector('.list-item');
+
+        const c = document.querySelectorAll('.list-item');
+
+        list.innerHTML = "<li>First</li> <li>Third</li>";
+
+        a.style.color = "green";
+    </script>
+</body>
+
+</html>
