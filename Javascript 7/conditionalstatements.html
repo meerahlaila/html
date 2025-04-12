@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements in Javascript</title>
+</head>
+<body>
+    <p>Click the button to get a greeting</p>
+    <button id="btn">Click</button>
+    <p id="time"></p>
+    <p id="greeting"></p>
+
+    <script>
+        document.getElementById("btn").addEventListener('click', function(e){
+            let greeting = "";
+            let date = new Date();
+
+            if(date.getHours() < 10){
+                greeting = "Good Morning, user!";
+            } else if (date.getHours() < 16){
+                greeting= "Good afternoon!";
+            } else if (date.getHours() < 20) {
+                greeting = "Good evening!";
+            } else {
+                greeting = "Good afternoon!";
+            }
+
+            document.getElementById('time').innerHTML = `${date.getHours()} : ${date.getMinutes()}`
+
+            document.getElementById('greeting').innerHTML = greeting;
+        });
+    </script>
+</body>
+</html>
