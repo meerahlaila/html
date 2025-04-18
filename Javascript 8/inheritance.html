@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="display"></div>
+    <script>
+        class Car{
+            constructor(brand){
+                this.brand = brand;
+            }
+
+            display(){
+                return "I am " + this.brand
+            }
+
+           
+        }
+
+        class Model extends Car{
+            constructor(brand, model){
+                super(brand);
+                this.model = model;
+            }
+
+            show(){
+                return this.display() + " " + this.model;
+            }
+        }
+
+        let mustang = new Model("Ford", "mustang");
+        document.getElementById("display").innerHTML = mustang.show();
+    </script>
+</body>
+</html>

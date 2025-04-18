@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student Class</h1>
+    <div id="result"></div>
+    <script>
+        class Student {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        const display = document.getElementById("result");
+        const students = [
+            new Student("Nameerah", 2009),
+            new Student("Asif", 2020),
+            new Student("Aman", 2019),
+            new Student("Amina", 2008),
+        ]
+
+        students.forEach(student => {
+            const p = document.createElement('p')
+            p.innerHTML = `Name: ${student.name} Age: ${student.age()} years`
+
+            display.appendChild(p)
+        })
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Student{
+            constructor(name){
+                this.name = name;
+            }
+
+            static welcome(x){
+                return "Welcome "+ x.name;
+             }
+
+             static hello(){
+                return " Hello!"
+             }
+
+            hi(){
+                return "Hi " + this.name;
+            }
+        }
+
+        n1 = new Student("John");
+        document.write(n1.hi())
+
+        document.write(Student.hello())
+    </script>
+</body>
+</html>
