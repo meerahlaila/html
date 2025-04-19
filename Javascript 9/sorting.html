@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Javascript sorting </h2>
+    <button onclick="Asecending()">Asecending</button>
+    <button onclick="Descending()">Descending</button>
+    <div id="result"></div>
+    <div id="demo"></div>
+    <script>
+        const fruits = ["Banana", "Apple", "Orange", "Watermelon", "Grapes"]
+        document.getElementById("result").innerHTML = fruits;
+
+        function Asecending() {
+            fruits.sort();
+            document.getElementById("result").innerHTML = fruits;
+            numbers.sort(function (a, b){
+                return a - b;
+            });
+            document.getElementById("demo").innerHTML = numbers;
+        }
+
+        function Descending() {
+            fruits.reverse();
+            document.getElementById("result").innerHTML = fruits;
+            numbers.sort(function (a, b) {
+                return b - a;
+            });
+            document.getElementById("demo").innerHTML = numbers;
+        }
+
+        const numbers = [10, 9, 4, 29, 40, 3, 7, 2]
+       document.getElementById("result").innerHTML = numbers;
+            
+    </script>
+</body>
+
+</html>

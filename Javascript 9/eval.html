@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculator using Eval function</h2>
+    <input type="text" id="expression" placeholder="Enter a math expression">
+    <button id="calculateBtn" onclick="calculate()">Calculate</button>
+    <p id="result">Result:</p>
+
+    <script>
+        function calculate(){
+            const expression = document.getElementById("expression").value;
+
+            const result = eval(expression);
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>

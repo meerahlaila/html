@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const numbers = [5, 3, 9, 6, 2, 1];
+
+        function multiplyby10(num){
+            return num * 10;
+        }
+
+        function even(num){
+            return num % 2 === 0;
+        }
+
+        function biggerT5(num){
+            return num > 5;
+        }
+
+        const result = numbers.map(multiplyby10);
+        document.write(result + "<br>")
+
+        const evenNumbers = numbers.filter
+        (even);
+        document.write(evenNumbers)
+
+        const bigger = numbers.filter(biggerT5)
+        document.write(bigger)
+    </script>
+</body>
+</html>
