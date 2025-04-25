@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <p id="error"></p>  -->
+
+    <h2>Age Validator</h2>
+    <input type="text" id="ageInput" placeholder="Enter your age">
+    <button onclick="validateAge()">Check</button>
+    <p id="result"></p>
+    <script>
+//         try{
+//             alert("Welcome");
+//         } catch(error) {
+// document.getElementById("error").innerHTML = error.message
+//         } finally {
+//             document.write("Finally done")
+//         }
+
+ function validateAge() {
+    const ageInput = document.getElementById("ageInput").value
+    const result = document.getElementById("result")
+
+    try{
+        if(ageInput === ""){
+            throw new Error("Please enter an age")
+        }
+
+        if (isNaN(ageInput)){
+            throw new TypeError("Please Enter a valid number")
+        }
+
+        if (ageInput < 0 || ageInput > 120){
+            throw new RangeError("Please enter a valid age range")
+        }
+
+        result.textContent = `Valid age ${ageInput}`;
+        result.style.color = "green";
+    } catch(error) {
+
+        result.textContent = error;
+        result.style.color = "red"
+    }
+}
+    </script>
+</body>
+</html>

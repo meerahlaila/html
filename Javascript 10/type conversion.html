@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const num = 32.9;
+        const str1 = num + "";
+        const str2 = String(num)
+        const str3 = toString(num)
+        document.write(typeof(str3) + "<br>")
+
+        document.write(typeof(String(null)) + "<br>")
+        document.write(typeof (String(undefined)) + "<br>")
+
+        const name = "10.00";
+        const floatName = parseFloat(name);
+        document.write(floatName)
+
+        const floatNum = parseFloat(num)
+        document.write(floatNum.toFixed(2))
+
+        const intNum = parseInt(num)
+            document.write(intNum)
+    </script>
+</body>
+</html>
