@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>ACP 9 - JS </h3>
+    <button onclick="Asecending()">Asecending numbers</button>
+    <button onclick="Descending()">Descending numbers</button>
+    <div id="result"></div>
+    <div id="demo"></div>
+    
+    <script>
+
+            function Asecending() {
+                numbers.sort(function (a, b) {
+                    return a - b;
+                });
+                document.getElementById("demo").innerHTML = numbers;
+            }
+
+            function Descending() {
+                numbers.sort(function (a, b) {
+                    return b - a;
+                });
+                document.getElementById("demo").innerHTML = numbers;
+            }
+
+            const numbers = [8, 22, 59, 100, 9, 456, 28]
+            document.getElementById("result").innerHTML = numbers;
+        
+
+    </script>
+</body>
+</html>
