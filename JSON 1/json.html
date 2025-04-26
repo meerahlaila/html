@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Original Object: </p>
+    <pre id="original"></pre>
+
+    <p>JSON String: </p>
+    <pre id="json"></pre>
+
+    <button onclick="sendData()">Send Data</button>
+    <pre id="response"></pre>
+
+    <script>
+        const student = {
+            name: "Sara",
+            age: 12,
+            grade: 6,
+            subjects: ["Maths", "English"]
+        }
+
+        document.getElementById("original").textContent = `Name: ${student.name}, Age: ${student.age}, Grade: ${student.grade}, Subject: ${student.subjects}`
+
+        document.getElementById("json").textContent = JSON.stringify(student);
+
+        function sendData() {
+            const response = document.getElementById("response");
+            response.textContent = "Sending..."
+
+            setTimeout(() => {
+                try {
+                    response.textContent = `Data sent successfully!\n${JSON.stringify({
+                        status: "received",
+                        data: "student"
+                    })}`
+                } catch(error){
+                    response.textContent = error.message;
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
