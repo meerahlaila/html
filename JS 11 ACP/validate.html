@@ -16,7 +16,14 @@
     <p id="result"></p>
 
     <script>
-        
+        function myFunction() {
+            const inpObj = document.getElementById("name1");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("result").innerHTML = inpObj.validationMessage;
+            } else {
+                document.getElementById("result").innerHTML = "Input A-OK!"
+            };
+        }
     </script>
 </body>
 </html>
